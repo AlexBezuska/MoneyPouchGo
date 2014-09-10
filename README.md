@@ -12,8 +12,8 @@ Goals
 ---
 
 * Simple and clean and beautiful UI/UX
-* <i>Easy to navigate list of expendature types (food, gas, bill, etc)</i>
-* <i>Log transation in a simple flow</i>
+* <s>Easy to navigate list of expendature types (food, gas, bill, etc)</s>
+* <s>Log transation in a simple flow</s>
 * Easy to navigate transation history by day, week, month
 
 Tasks
