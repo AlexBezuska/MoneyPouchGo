@@ -35,6 +35,11 @@ $(document).ready(function() {
 		$(".amount").val("$0.00");
 	});
 
+	$(document).on("mousedown touchstart", ".remove", function() {
+		console.log(event);
+		('*[data-guid="' + thisGuid + '"]').remove();
+	});
+
 });
 
 
@@ -43,8 +48,10 @@ $(document).ready(function() {
  * creates html elements for a log item in the transaction history.
  */
 function createLogItem(amount, category) {
-	$('.history').prepend('<div class="entry"><div class="date">' + createDate() + '</div><div class="label" ><span>' + category + '</span></div><input type="text" data-mask="money" value="' + toMoney(amount) + '"></input><button class="remove">-</button></div>');
+	$('.history').prepend('<div class="entry" data-guid="' + makeGuid() + '"><div class="date">' + createDate() + '</div><div class="label" ><span>' + category + '</span></div><input type="text" data-mask="money" value="' + toMoney(amount) + '"></input><button class="remove" data-guid="' + makeGuid() + '">-</button></div>');
 }
+
+
 
 /*
  * Returns string of text of the current selected category name.
@@ -123,5 +130,16 @@ function createTime() {
 	d.getHours(); // => 9
 	d.getMinutes(); // =>  30
 	d.getSeconds(); // => 51
-	return
+	return;
+}
+
+function s4() {
+	return Math.floor((1 + Math.random()) * 0x10000)
+		.toString(16)
+		.substring(1);
+}
+
+function makeGuid() {
+	return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+		s4() + '-' + s4() + s4() + s4();
 }
