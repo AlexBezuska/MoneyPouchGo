@@ -7,7 +7,7 @@ The goal of the project is to provide a simple interface to log spending indepen
 Goals
 ---
 
-* Simple and clean and beutiful UI/UX
+* Simple and clean and beautiful UI/UX
 * Easy to navigate lisgt of expendature types (food, gas, bill, etc)
 * Log transation in a simple 'tap, type, tap' flow
 * Easy to navigate transation history by day, week, month

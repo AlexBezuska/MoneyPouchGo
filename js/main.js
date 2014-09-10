@@ -113,3 +113,10 @@ function createDate() {
 	var curr_year = d.getFullYear();
 	return curr_date + "." + curr_month + "." + curr_year;
 }
+
+function createTime() {
+	var d = new Date(); // for now
+	d.getHours(); // => 9
+	d.getMinutes(); // =>  30
+	d.getSeconds(); // => 51
+}
