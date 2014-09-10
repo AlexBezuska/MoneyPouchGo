@@ -4,6 +4,7 @@
   height: $finger-size * 4;
   overflow-y: scroll;
   div {
+    @include user-select(none);
     width: 100%;
     height: $finger-size;
     background: $light;
@@ -12,6 +13,7 @@
     text-align: center;
     padding: $finger-size / 3;
     &:hover {
+      cursor: pointer;
       background: darken($light, 5%);
     }
   }

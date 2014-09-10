@@ -11,6 +11,8 @@
     vertical-align: top;
   }
   .add {
+    outline: none;
+    @include user-select(none);
     background: $active;
     color: $text;
     border: 0px;
@@ -19,5 +21,12 @@
     width: $finger-size;
     margin: 0 auto;
     vertical-align: top;
+    &:hover {
+      cursor: pointer;
+      background: darken($active, 5%);
+    }
+    &:active {
+      background: darken($active, 5%);
+    }
   }
 }

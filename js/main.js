@@ -1,6 +1,7 @@
 "use strict";
 
 $(document).ready(function() {
+
 	$(document).on("mousedown touchstart", ".type div", function() {
 		deactivateAllCategories();
 		activateCategory(this);
@@ -25,7 +26,28 @@ $(document).ready(function() {
 		value = toMoney(value);
 		$(this).val(value);
 	});
+
+	$(document).on("mousedown touchstart", ".add", function() {
+		createLogItem($('.amount').val(), getSelectedCategory());
+	});
+
 });
+
+
+/*
+ * Takes in a dollar amount and category
+ * creates html elements for a log item in the transaction history.
+ */
+function createLogItem(amount, category) {
+	$('.history').append('<div class="entry"><div class="date">' + createDate() + '</div><div class="label" >' + category + '</div><input type="text" data-mask="money" value="' + amount + '"></input><button class="remove">-</button></div>');
+}
+
+/*
+ * Returns string of text of the current selected category name.
+ */
+function getSelectedCategory() {
+	return $(".type .active").text();
+}
 
 function deactivateAllCategories() {
 	$(".type .active").removeClass("active");
@@ -81,4 +103,13 @@ function toMoney(value) {
 function preciseRound(num, decimals) {
 	var rounded = Math.round(num * Math.pow(10, decimals)) / Math.pow(10, decimals);
 	return rounded;
+}
+
+
+function createDate() {
+	var d = new Date();
+	var curr_date = d.getDate();
+	var curr_month = d.getMonth() + 1; //Months are zero based
+	var curr_year = d.getFullYear();
+	return curr_date + "." + curr_month + "." + curr_year;
 }
