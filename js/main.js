@@ -5,7 +5,10 @@ $(document).ready(function() {
 	$(document).on("mousedown touchstart", ".type div", function() {
 		deactivateAllCategories();
 		activateCategory(this);
-		setFocus(".amount");
+	});
+
+	$('input[type="text"]').click(function() {
+		$(this).select();
 	});
 
 	$('*[data-mask="money"]').each(function() {
@@ -29,6 +32,7 @@ $(document).ready(function() {
 
 	$(document).on("mousedown touchstart", ".add", function() {
 		createLogItem($('.amount').val(), getSelectedCategory());
+		$(".amount").val("$0.00");
 	});
 
 });
@@ -39,7 +43,7 @@ $(document).ready(function() {
  * creates html elements for a log item in the transaction history.
  */
 function createLogItem(amount, category) {
-	$('.history').append('<div class="entry"><div class="date">' + createDate() + '</div><div class="label" >' + category + '</div><input type="text" data-mask="money" value="' + amount + '"></input><button class="remove">-</button></div>');
+	$('.history').prepend('<div class="entry"><div class="date">' + createDate() + '</div><div class="label" ><span>' + category + '</span></div><input type="text" data-mask="money" value="' + toMoney(amount) + '"></input><button class="remove">-</button></div>');
 }
 
 /*
@@ -119,4 +123,5 @@ function createTime() {
 	d.getHours(); // => 9
 	d.getMinutes(); // =>  30
 	d.getSeconds(); // => 51
+	return
 }

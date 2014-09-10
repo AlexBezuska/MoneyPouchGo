@@ -1,16 +1,19 @@
 //Calculator
 
 .calculator {
+  text-align: center;
   margin: $finger-size / 10 auto;
   .amount {
     text-align: right;
     font-size: 1.8rem;
-    width: 85%;
+    width: 70%;
     height: $finger-size;
     margin: 0 0 0 $finger-size / 10;
     vertical-align: top;
+    display: inline-block;
   }
   .add {
+    display: inline-block;
     outline: none;
     @include user-select(none);
     background: $active;
@@ -19,8 +22,11 @@
     font-size: 1.8rem;
     height: $finger-size;
     width: $finger-size;
+    border-radius: $finger-size;
     margin: 0 auto;
+    padding: 0 0 5px 0;
     vertical-align: top;
+    text-align: center;
     &:hover {
       cursor: pointer;
       background: darken($active, 5%);

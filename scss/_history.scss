@@ -1,1 +1,55 @@
 //  History
+
+.history {
+  .entry {
+    position: relative;
+    background: $light;
+    border-top: 1px solid lighten($light, 10%);
+    border-bottom: 1px solid darken($light, 10%);
+    width: 100%;
+    .date {
+      width: 25%;
+      font-size: 11px;
+      display: inline-block;
+      padding: 5px;
+    }
+    .label {
+      width: 30%;
+      font-size: .8rem;
+      display: inline-block;
+      span {
+        display: block;
+        background: $active;
+        width: 95px !important;
+        padding: 10px 5px;
+        border-radius: 5px;
+        text-align: center;
+      }
+    }
+    input {
+      width: 30%;
+      height: $finger-size;
+      background: $light;
+      border: 0px;
+      font-size: 1.2rem;
+      display: inline-block;
+      text-align: right;
+    }
+    .remove {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      border: 0px;
+      font-size: 1.2rem;
+      width: $finger-size * 0.75;
+      height: $finger-size * 0.75;
+      border-radius: $finger-size * 0.75;
+      color: $text;
+      background: lighten($light, 5%);
+      &:hover {
+        cursor: pointer;
+        background: lighten($light, 10%);
+      }
+    }
+  }
+}

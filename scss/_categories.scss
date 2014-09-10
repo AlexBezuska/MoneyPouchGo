@@ -7,9 +7,10 @@
     @include user-select(none);
     width: 100%;
     height: $finger-size;
-    background: $light;
     color: $text;
-    border-bottom: 1px solid darken($light, 20%);
+    background: $light;
+    border-top: 1px solid lighten($light, 10%);
+    border-bottom: 1px solid darken($light, 10%);
     text-align: center;
     padding: $finger-size / 3;
     &:hover {
