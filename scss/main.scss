@@ -1,0 +1,41 @@
+$finger-size: 48px;
+$text: #353938;
+$light: #d5d1d5;
+$active: #d4e5e6;
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "helvetica neue", helvetica, verdana, sans-serif;
+  font-weight: 200;
+  letter-spacing: .1rem;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.type {
+  height: $finger-size * 4;
+  overflow-y: scroll;
+  div {
+    width: 100%;
+    height: $finger-size;
+    background: $light;
+    color: $text;
+    border-bottom: 1px solid darken($light, 20%);
+    text-align: center;
+    padding: $finger-size / 3;
+    &:hover {
+      background: darken($light, 5%);
+    }
+  }
+  div.active {
+    color: $text;
+    background: $active;
+  }
+}
