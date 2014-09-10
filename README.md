@@ -16,6 +16,16 @@ Goals
 * Log transation in a simple 'tap, type, tap' flow
 * Easy to navigate transation history by day, week, month
 
+Tasks
+---
+
+* Make remove buttons work
+* Store data
+* day - week - month - year seperators
+
+
+
+
 
 Decisions to make
 ---
