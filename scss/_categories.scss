@@ -1,0 +1,22 @@
+//Transaction Type
+
+.type {
+  height: $finger-size * 4;
+  overflow-y: scroll;
+  div {
+    width: 100%;
+    height: $finger-size;
+    background: $light;
+    color: $text;
+    border-bottom: 1px solid darken($light, 20%);
+    text-align: center;
+    padding: $finger-size / 3;
+    &:hover {
+      background: darken($light, 5%);
+    }
+  }
+  div.active {
+    color: $text;
+    background: $active;
+  }
+}

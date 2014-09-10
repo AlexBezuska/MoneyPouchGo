@@ -1,69 +1,12 @@
-$finger-size: 55px;
-$text: #353938;
-$light: #d5d1d5;
-$active: #d4e5e6;
+/*
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+	Sass Minifest
 
-html {
-  font-family: "helvetica neue", helvetica, verdana, sans-serif;
-  font-weight: 200;
-  letter-spacing: .1rem;
-}
+*/
 
-body {
-  margin: 0 auto;
-}
-
-//Transaction Type
-
-.type {
-  height: $finger-size * 4;
-  overflow-y: scroll;
-  div {
-    width: 100%;
-    height: $finger-size;
-    background: $light;
-    color: $text;
-    border-bottom: 1px solid darken($light, 20%);
-    text-align: center;
-    padding: $finger-size / 3;
-    &:hover {
-      background: darken($light, 5%);
-    }
-  }
-  div.active {
-    color: $text;
-    background: $active;
-  }
-}
-
-//Calculator
-
-.calculator {
-  margin: $finger-size / 10 auto;
-  .amount {
-    text-align: right;
-    font-size: 1.8rem;
-    width: 85%;
-    height: $finger-size;
-    margin: 0 0 0 $finger-size / 10;
-    vertical-align: top;
-  }
-  .add {
-    background: $active;
-    color: $text;
-    border: 0px;
-    font-size: 1.8rem;
-    height: $finger-size;
-    width: $finger-size;
-    margin: 0 auto;
-    vertical-align: top;
-  }
-}
-
-//Histor
+@import "bourbon/bourbon";
+@import "colors";
+@import "general";
+@import "categories";
+@import "input";
+@import "history";

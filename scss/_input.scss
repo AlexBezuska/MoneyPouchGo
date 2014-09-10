@@ -1,0 +1,23 @@
+//Calculator
+
+.calculator {
+  margin: $finger-size / 10 auto;
+  .amount {
+    text-align: right;
+    font-size: 1.8rem;
+    width: 85%;
+    height: $finger-size;
+    margin: 0 0 0 $finger-size / 10;
+    vertical-align: top;
+  }
+  .add {
+    background: $active;
+    color: $text;
+    border: 0px;
+    font-size: 1.8rem;
+    height: $finger-size;
+    width: $finger-size;
+    margin: 0 auto;
+    vertical-align: top;
+  }
+}
