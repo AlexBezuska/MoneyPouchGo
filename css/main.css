@@ -17,6 +17,18 @@ body {
   background: #cbc6cb;
   margin: 0 auto; }
 
+.hidden {
+  display: none; }
+
+#sync-error, #sync-success {
+  display: none; }
+
+[data-sync-state=syncing] #sync-success {
+  display: block; }
+
+[data-sync-state=error] #sync-error {
+  display: block; }
+
 .type {
   height: 220px;
   overflow-y: scroll; }
@@ -43,7 +55,7 @@ body {
 .calculator {
   text-align: center;
   margin: 5.5px auto; }
-  .calculator .amount {
+  .calculator #amount {
     text-align: right;
     font-size: 1.8rem;
     width: 70%;
@@ -51,7 +63,7 @@ body {
     margin: 0 0 0 5.5px;
     vertical-align: top;
     display: inline-block; }
-  .calculator .add {
+  .calculator #add {
     display: inline-block;
     outline: none;
     -webkit-user-select: none;
@@ -69,53 +81,57 @@ body {
     padding: 0 0 5px 0;
     vertical-align: top;
     text-align: center; }
-    .calculator .add:hover {
+    .calculator #add:hover {
       cursor: pointer;
       background: #c4dbdd; }
-    .calculator .add:active {
+    .calculator #add:active {
       background: #c4dbdd; }
 
-.history .entry {
-  position: relative;
-  background: #d5d1d5;
-  border-top: 1px solid #edeced;
-  border-bottom: 1px solid #bdb6bd;
-  width: 100%; }
-  .history .entry .date {
-    width: 25%;
-    font-size: 11px;
-    display: inline-block;
-    padding: 5px; }
-  .history .entry .label {
-    width: 30%;
-    font-size: .8rem;
-    display: inline-block; }
-    .history .entry .label span {
-      display: block;
-      background: #d4e5e6;
-      width: 95px !important;
-      padding: 10px 5px;
-      border-radius: 5px;
-      text-align: center; }
-  .history .entry input {
-    width: 30%;
-    height: 55px;
+#history-list {
+  margin: 0 auto;
+  padding: 0; }
+  #history-list li {
+    list-style-type: none;
+    position: relative;
     background: #d5d1d5;
-    border: 0px;
-    font-size: 1.2rem;
-    display: inline-block;
-    text-align: right; }
-  .history .entry .remove {
-    position: absolute;
-    top: 4px;
-    right: 4px;
-    border: 0px;
-    font-size: 1.2rem;
-    width: 41.25px;
-    height: 41.25px;
-    border-radius: 41.25px;
-    color: #353938;
-    background: #e1dee1; }
-    .history .entry .remove:hover {
-      cursor: pointer;
-      background: #edeced; }
+    border-top: 1px solid #edeced;
+    border-bottom: 1px solid #bdb6bd;
+    width: 100%; }
+    #history-list li .date {
+      width: 25%;
+      font-size: 11px;
+      display: inline-block;
+      padding: 5px; }
+    #history-list li .label {
+      width: 30%;
+      font-size: .8rem;
+      display: inline-block; }
+      #history-list li .label span {
+        display: block;
+        background: #d4e5e6;
+        width: 95px !important;
+        padding: 10px 5px;
+        border-radius: 5px;
+        text-align: center; }
+    #history-list li input {
+      width: 30%;
+      height: 55px;
+      background: #d5d1d5;
+      border: 0px;
+      font-size: 1.2rem;
+      display: inline-block;
+      text-align: right; }
+    #history-list li .remove {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      border: 0px;
+      font-size: 1.2rem;
+      width: 41.25px;
+      height: 41.25px;
+      border-radius: 41.25px;
+      color: #353938;
+      background: #e1dee1; }
+      #history-list li .remove:hover {
+        cursor: pointer;
+        background: #edeced; }

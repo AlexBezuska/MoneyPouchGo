@@ -36,17 +36,24 @@
 
     <section class="calculator">
  
-        <input class="amount" type="text" data-mask="money"></input>
-        <button class="add">+</button>
+        <input id="amount" type="text" data-mask="money"></input>
+        <button id="add">+</button>
     </section>
 
     <section class="history">
 
-<div class="entry"><div class="date">10.9.2014</div><div class="label"><span>Household</span></div><input type="text" data-mask="money" value="$67.00"><button class="remove">-</button></div><div class="entry"><div class="date">10.9.2014</div><div class="label"><span>Fuel</span></div><input type="text" data-mask="money" value="$55.00"><button class="remove">-</button></div><div class="entry"><div class="date">10.9.2014</div><div class="label"><span>Other</span></div><input type="text" data-mask="money" value="$45.00"><button class="remove">-</button></div><div class="entry"><div class="date">10.9.2014</div><div class="label"><span>Giving</span></div><input type="text" data-mask="money" value="$32.00"><button class="remove">-</button></div><div class="entry"><div class="date">10.9.2014</div><div class="label"><span>Food</span></div><input type="text" data-mask="money" value="$13.56"><button class="remove">-</button></div></section>
+
 
 </div>
-<footer>
-</footer>
+
+<ul id="history-list"></ul>
+ <footer id="footer">
+    <span id="todo-count"></span>
+        <div id="sync-wrapper">
+          <div id="sync-success">Currently syncing</div>
+          <div id="sync-error">There was a problem syncing</div>
+        </div>
+      </footer><script src="//cdn.jsdelivr.net/pouchdb/3.0.5/pouchdb.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
 <script src="js/main.js"></script>
