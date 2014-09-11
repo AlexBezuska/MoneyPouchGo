@@ -1,16 +1,39 @@
 //Transaction Type
 
 .type {
-  height: $finger-size * 4;
+  height: $finger-size * 4.3;
   overflow-y: scroll;
   div {
     @include user-select(none);
+    
+      @include breakpoint(papa-bear) {
+    width: 49%;
+    float: left;
+    margin: 2px;
+        border-radius: 4px;
+    border-left: 1px solid lighten($light, 5%);
+    border-right: 1px solid darken($light, 5%);
+    border-top: 1px solid lighten($light, 2%);
+    border-bottom: 1px solid darken($light, 12%);
+  }
+  @include breakpoint(mama-bear) {
+    width: 49%;
+    float: left;
+    border-left: 1px solid lighten($light, 5%);
+    border-right: 1px solid darken($light, 5%);
+    border-top: 1px solid lighten($light, 2%);
+    border-bottom: 1px solid darken($light, 12%);
+    border-radius: 4px;
+  }
+  @include breakpoint(baby-bear) {
     width: 100%;
+    border-top: 1px solid lighten($light, 10%);
+    border-bottom: 1px solid darken($light, 10%);
+  }
     height: $finger-size;
     color: $text;
     background: $light;
-    border-top: 1px solid lighten($light, 10%);
-    border-bottom: 1px solid darken($light, 10%);
+    
     text-align: center;
     padding: $finger-size / 3;
     &:hover {

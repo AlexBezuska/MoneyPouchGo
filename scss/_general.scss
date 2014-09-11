@@ -1,36 +1,63 @@
 $finger-size: 55px;
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-  font-family: "helvetica neue", helvetica, verdana, sans-serif;
-  font-weight: 200;
-  letter-spacing: .1rem;
+	font-family: "helvetica neue", helvetica, verdana, sans-serif;
+	font-weight: 200;
+	letter-spacing: .1rem;
 }
 
 body {
-  background: darken($light, 4%);
-  margin: 0 auto;
+	@include breakpoint(papa-bear) {
+		background: darken($light, 55%);
+	}
+	@include breakpoint(mama-bear) {
+		background: darken($light, 55%);
+	}
+	@include breakpoint(baby-bear) {
+		background: darken($light, 4%);
+	}
+	margin: 0 auto;
 }
 
-
+.page{
+	@include breakpoint(papa-bear) {
+		background: darken($light, 4%);
+		padding: 30px 15px;
+		border-radius: 10px;
+		margin: 45px auto;
+		width: 450px;
+	}
+	@include breakpoint(mama-bear) {
+		background: darken($light, 4%);
+		padding: 30px 15px;
+		border-radius: 10px;
+		margin: 45px auto;
+		width: 450px;
+	}
+	@include breakpoint(baby-bear) {
+		min-width: 370px;
+		max-width: 100%;
+	}
+}
 
 .hidden{
-    display:none;
+	display:none;
 }
 
 #sync-error, #sync-success {
-  display: none;
+	display: none;
 }
 
 [data-sync-state=syncing] #sync-success {
-  display: block;
+	display: block;
 }
 
 [data-sync-state=error] #sync-error {
-  display: block;
+	display: block;
 }

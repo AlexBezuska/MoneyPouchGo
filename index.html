@@ -35,25 +35,24 @@
     </section>
 
     <section class="calculator">
- 
         <input id="amount" type="text" data-mask="money"></input>
         <button id="add">+</button>
     </section>
 
     <section class="history">
 
-
-
+        <ul id="history-list"></ul>
+    </section>
+    <footer id="footer">
+        <span id="todo-count"></span>
+        <div id="sync-wrapper">
+            <div id="sync-success">Currently syncing</div>
+            <div id="sync-error">There was a problem syncing</div>
+        </div>
+    </footer>
 </div>
 
-<ul id="history-list"></ul>
- <footer id="footer">
-    <span id="todo-count"></span>
-        <div id="sync-wrapper">
-          <div id="sync-success">Currently syncing</div>
-          <div id="sync-error">There was a problem syncing</div>
-        </div>
-      </footer><script src="//cdn.jsdelivr.net/pouchdb/3.0.5/pouchdb.min.js"></script>
+<script src="//cdn.jsdelivr.net/pouchdb/3.0.5/pouchdb.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
 <script src="js/main.js"></script>
