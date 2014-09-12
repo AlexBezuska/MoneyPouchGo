@@ -1,7 +1,9 @@
-tracker
+MoneyPouchGo
 =========
 
-tracker is a very soon to be renamed mobile web app to track financial transations in the fastest and easiest possible way. tracker uses PouchDB to create a local database in your browser, then when possible it syncs with a remote CouchDB. The sync works both ways so any transactions logged uisng the app will end up in all databases.
+MoneyPouchGo is a mobile web app that will be used to quickly store data while on the go for use in the parent application MoneyPouch, which will be a Chrome Web App. [See MoneyPouch Repo here](https://github.com/AlexBezuska/MoneyPouch)
+
+MoneyPouchGo is a  mobile web app to track financial transations in the fastest and easiest possible way. MoneyPouchGo uses PouchDB to create a local database in your browser, then when possible it syncs with a remote CouchDB. The sync works both ways so any transactions logged uisng the app will end up in all databases.
 The goal of the project is to provide a simple interface to log spending independant of how the transaction was made (cash, credit, debit, etc.)
 
 ---
